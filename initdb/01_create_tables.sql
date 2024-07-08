@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS orders (
         ); 
 
 CREATE TABLE IF NOT EXISTS statistics (
-        category_id INT,
+        category_id INT REFERENCES categories (id),
         total_products INT,
         day DATE,
         PRIMARY KEY (category_id, day)
