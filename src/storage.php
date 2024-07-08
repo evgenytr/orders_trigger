@@ -36,7 +36,7 @@ class Storage {
                         "SELECT categories.category_name,statistics.total_products, statistics.day
                          FROM statistics 
                          JOIN categories ON categories.id=statistics.category_id
-                         ORDER BY statistics.day");
+                         ORDER BY statistics.day, categories.category_name");
          while($row = pg_fetch_row($ret)) {
              $result[] = $row;
          };                   
